@@ -40,6 +40,30 @@ Sign up to the [mailing list](https://mailchi.mp/overleaf.com/community-edition-
 
 We have detailed installation instructions in the [Overleaf Toolkit](https://github.com/overleaf/toolkit/).
 
+## Quick local run (educatex helper)
+
+A new helper script has been added in `scripts/start-local.sh` and `scripts/stop-local.sh` for a quick local environment (Docker-based).
+
+Veja também: `local_run.md` para instruções detalhadas.
+
+1. Build images and start services:
+
+   ```bash
+   cd /home/gilzamir/educadev/educatex
+   ./scripts/start-local.sh
+   ```
+
+2. Open in browser:
+
+   - http://localhost
+
+3. Stop services:
+
+   ```bash
+   ./scripts/stop-local.sh
+   ```
+
+Note: requires Docker and Docker Compose plugin/binary. Optionally uses `make` in `server-ce/` to build local images.
 ## Upgrading
 
 If you are upgrading from a previous version of Overleaf, please see the [Release Notes section on the Wiki](https://github.com/overleaf/overleaf/wiki#release-notes) for all of the versions between your current version and the version you are upgrading to.
